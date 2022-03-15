@@ -1,0 +1,149 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* nav */
+
+.nav {
+  background-color: #fff;
+}
+
+.nav h1::before {
+  display: block;
+  content: "Version Ecran Smartphone (<768px)";
+  text-align: center;
+  font-size: 1rem;
+}
+
+.nav ul {
+  margin-left: 40%;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.nav li a {
+  display: block;
+  padding: 1.25rem 1.25rem;
+  text-decoration: none;
+}
+
+/* menu */
+
+.nav .menu {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icone */
+
+.nav .menu-icone {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1.75rem 1.25rem;
+  position: relative;
+  user-select: none;
+}
+
+.nav .menu-icone .nav-icone {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 1.375rem;
+}
+
+.nav .menu-icone .nav-icone:before,
+.nav .menu-icone .nav-icone:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.nav .menu-icone .nav-icone:before {
+  top: 5px;
+}
+
+.nav .menu-icone .nav-icone:after {
+  top: -5px;
+}
+
+/* menu bouton */
+
+.nav .menu-bouton {
+  display: none;
+}
+
+.nav .menu-bouton:checked ~ .menu {
+  max-height: 15rem; /* définit la taille du conteneur des liens*/
+}
+
+.nav .menu-bouton:checked ~ .menu-icone .nav-icone {
+  background: transparent; /* Fait disparaître le span initial*/
+}
+
+.nav .menu-bouton:checked ~ .menu-icone .nav-icone:before {
+  transform: rotate(
+    -45deg
+  ); /*fait pivoter le span before de 45degrès ver la gauche*/
+}
+
+.nav .menu-bouton:checked ~ .menu-icone .nav-icone:after {
+  transform: rotate(
+    45deg
+  ); /*fait pivoter le span before de 45degrès ver la droite*/
+}
+
+.nav .menu-bouton:checked ~ .menu-icone .nav-icone:before,
+.nav .menu-bouton:checked ~ .menu-icone .nav-icone:after {
+  top: 0;
+}
+
+/* 48rem = 768px qui est la résolution min des écran pc*/
+
+@media (min-width: 48rem) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav h1::before {
+    content: "Version Ecran large (>768px)";
+  }
+  .nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  .nav li {
+    float: left;
+  }
+  .nav li a {
+    padding: 1.25rem 1.875rem;
+    border-right: 1px solid #f4f4f4;
+  }
+  .nav .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .nav .menu-icone {
+    display: none;
+  }
+}

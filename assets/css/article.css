@@ -1,0 +1,18 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+.article h2 {
+  text-align: center;
+}
+
+.article p {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
