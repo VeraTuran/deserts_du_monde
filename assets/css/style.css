@@ -2,17 +2,24 @@
 @import "article.css"; */
 
 * {
-  border: solid 1px orange;
+  /* border: solid 1px orange; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 0.5rem;
+  justify-content: space-around;
+  text-align: center;
+  /* margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 1rem; */
+  width: 100%;
+  background-color: white;
 }
 
 header h1 {
@@ -22,7 +29,15 @@ header h1 {
   color: #9d5d35;
 }
 
-.navbar {
+.logo-area {
+  padding: 1rem;
+}
+
+.logo-area img {
+  width: 20%;
+}
+
+/* .navbar {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -33,20 +48,25 @@ header h1 {
   color: black;
   text-align: center;
   width: 100%;
-}
+} */
 
 .article {
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  /* margin-left: 1.5rem;
+  margin-right: 1.5rem; 
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
+  margin-bottom: 0.5rem; */
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .article h2 {
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .article p {
@@ -54,7 +74,12 @@ header h1 {
   margin-bottom: 0rem;
 }
 
-footer {
-  border-top: 1px solid gray;
+.article img {
   text-align: center;
+}
+
+footer {
+  border-top: 2px solid #e2e2e2;
+  text-align: center;
+  padding: 1rem;
 }
