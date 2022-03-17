@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   /* font-family: Helvetica, sans-serif; */
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
 }
 
 a {
@@ -32,15 +32,13 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .nav li a {
   display: block;
-  padding: 1.25rem 1.25rem;
+  padding: 1rem 1rem;
   text-decoration: none;
   text-align: center;
-  background-color: #e2e2e2;
   border-bottom: 1px solid white;
 }
 
@@ -49,18 +47,19 @@ a {
 .nav .menu {
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  background-color: #e2e2e2;
 }
 
 /* menu icone */
 
 .nav .menu-icone {
   cursor: pointer;
-  /* display: inline-block; */
+  display: inline-block;
   padding: 1.75rem 1.25rem;
   position: relative;
   user-select: none;
   float: right;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .nav .menu-icone .nav-icone {
